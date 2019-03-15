@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Page 2!</title>
+  </head>
+  <body style="display: none;">
+    <nav class="navbar navbar-expand-md sticky-top navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link scrollto" href="#section1">Section 1</a></li>
+          <li class="nav-item"><a class="nav-link scrollto" href="#section2">Section 2</a></li>
+          <li class="nav-item"><a class="nav-link scrollto" href="#section3">Section 3</a></li>
+          <li class="nav-item"><a class="nav-link transition" href="index.html">Main page</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Section 1 -->
+    <div id="section1" class="p-5">
+      <h1 class="p-5">Section 1</h1>
+      <p>Try to scroll this page and look at the navigation bar while scrolling!</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus alias minus ipsam, excepturi vitae, recusandae labore sed, omnis sapiente eius eaque obcaecati ipsa incidunt tempore sequi quas. Voluptates, est ab!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut sequi, eum officiis cupiditate maiores distinctio nobis iusto odit quos autem, consectetur aut non odio itaque quasi necessitatibus quam, esse.</p>
+    </div>
+
+    <!-- Section 2 -->
+    <div id="section2" class="p-5">
+      <h1 class="p-5">Section 2</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque magnam neque excepturi adipisci! Amet sint nam officiis nemo ratione ducimus in id, eos cum quisquam sed, suscipit provident, quod dolorum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi magni eius ad, deleniti illo similique delectus accusantium tempore. Tempora aperiam illum eius error, quo doloribus enim sequi voluptatibus quod iusto.</p>
+    </div>
+
+    <!-- Section 3 -->
+    <div id="section3" class="p-5">
+      <h1 class="p-5">Section 3</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolorem, voluptate distinctio ab consequuntur maiores debitis labore cum ullam vero in ex enim! Quo ipsa reiciendis id facere corrupti. Eius?</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, ea impedit rem est molestiae consectetur temporibus adipisci quae veniam, praesentium esse nostrum. Vel est aliquid iste eum quas corporis sequi.</p>
+    </div>
+
+    <div class="p-5">
+      <h1 class="p-5">Footer</h1>
+      <a class="scrollto" href="#section1">^^Top!^^</a>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- Smooth Scroll -->
+    <script>
+      $(document).ready(function() {
+        $("a.scrollto").click(function () {
+        var elementClick = $(this).attr("href")
+        var destination = $(elementClick).offset().top;
+        jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
+        return false;
+        });
+      });
+    </script>
+
+    <!-- Links Fading -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+                $("body").css("display", "none");
+                $("body").fadeIn(500);
+        });
+    </script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("body").css("display", "none");
+    
+        $("body").fadeIn(1000);
+    
+      $("a.transition").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        $("body").fadeOut(1000, redirectPage);
+      });
+    
+      function redirectPage() {
+        window.location = linkLocation;
+      }
+    });
+    </script>
+  </body>
+</html>
